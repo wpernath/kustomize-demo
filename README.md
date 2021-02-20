@@ -7,8 +7,19 @@ Setup your OpenShift cluster (use code-ready/crc), login into it with the user d
 $> crc setup && crc start
 $> oc login -u developer -p developer https://api.crc.testing:6443/
 $> oc new-project kustomize-demo
+```
+
+
+### Setup kustomize on Mac
+```bash
+$> brew install kustomize
 
 ```
+
+### Other OS'ses
+Just read here: https://kubectl.docs.kubernetes.io/installation/kustomize/
+
+
 ## Installing the base app
 ```bash
 $> kustomize build ./base | oc apply -f -
