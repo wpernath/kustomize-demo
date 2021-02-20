@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: my-hello
+  name: the-route
+spec:
+  host: kust-dev.apps-crc.testing
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: the-service
+    weight: 100
+  wildcardPolicy: None

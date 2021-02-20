@@ -1,0 +1,8 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: the-route
+spec:
+  host: kust-staging.apps-crc.testing
+  to:
+    name: staging-the-service
